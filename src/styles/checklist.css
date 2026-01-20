@@ -579,6 +579,43 @@
     padding: 1.5rem;
   }
 
+  .guidance-cards {
+    grid-template-columns: 1fr;
+    border-bottom: 2px solid #000;
+  }
+
+  .card,
+  .card-selector {
+    border-right: none;
+    border-bottom: 2px solid #000;
+  }
+
+  .card:last-child,
+  .card-selector:last-child {
+    border-bottom: none;
+  }
+
+  .sort-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .sort-buttons {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .sort-button {
+    width: 100%;
+    border-right: 2px solid #000;
+  }
+
+  .sort-button + .sort-button {
+    margin-top: 0.25rem;
+  }
+
   .checklist-stats {
     grid-template-columns: 1fr;
   }
