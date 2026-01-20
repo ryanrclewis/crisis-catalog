@@ -200,6 +200,83 @@ header .cross {
   color: #000;
 }
 
+.disclaimer-link {
+  background: none;
+  border: none;
+  color: #000;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  font-family: inherit;
+}
+
+.disclaimer-link:hover {
+  background: #000;
+  color: #fff;
+}
+
+.disclaimer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.disclaimer-content {
+  background: white;
+  border: 4px solid #000;
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.disclaimer-content h3 {
+  margin: 0 0 1rem 0;
+  color: #000;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+.disclaimer-content p {
+  margin: 0.75rem 0;
+  color: #000;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.disclaimer-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.1s ease;
+}
+
+.disclaimer-close:hover {
+  background: #fff;
+  color: #000;
+}
+
 /* Buttons */
 button {
   font-family: var(--font-family);

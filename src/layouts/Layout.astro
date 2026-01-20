@@ -31,7 +31,31 @@ const { title = 'Emergency Preparedness' } = Astro.props;
     </main>
     <footer class="site-footer">
       <p>BUILT BY <a href="https://archangel-laboratories.com" target="_blank">ARCHANGEL LABORATORIES</a></p>
+      <p>
+        <a href="https://www.paypal.com/ncp/payment/JUBCY4C2DDZ8E" target="_blank" rel="noopener noreferrer">Donate</a> | 
+        <button id="disclaimer-btn" class="disclaimer-link">Affiliate Disclosure</button>
+      </p>
     </footer>
+
+    <div id="disclaimer-modal" class="disclaimer-modal" style="display: none;">
+      <div class="disclaimer-content">
+        <button id="close-disclaimer" class="disclaimer-close">✕</button>
+        <h3>Affiliate Disclosure</h3>
+        <p>
+          This website contains affiliate links, including Amazon Associate links. 
+          As an Amazon Associate, we earn from qualifying purchases made through these links at no additional cost to you.
+        </p>
+        <p>
+          When you click on certain links to purchase recommended items and make a purchase, 
+          we may receive a commission. This helps support the maintenance and development of this site.
+        </p>
+        <p>
+          We only recommend products we have personally used or believe will add value to our readers. 
+          Your support is greatly appreciated.
+        </p>
+      </div>
+    </div>
+
     <script>
       // Register service worker for offline support
       if ('serviceWorker' in navigator && import.meta.env.PROD) {
@@ -39,6 +63,31 @@ const { title = 'Emergency Preparedness' } = Astro.props;
           // Service worker registration failed, app still works offline with just localStorage
         });
       }
+
+      // Disclaimer modal
+      const disclaimerBtn = document.getElementById('disclaimer-btn');
+      const disclaimerModal = document.getElementById('disclaimer-modal');
+      const closeDisclaimer = document.getElementById('close-disclaimer');
+
+      disclaimerBtn?.addEventListener('click', () => {
+        disclaimerModal!.style.display = 'flex';
+      });
+
+      closeDisclaimer?.addEventListener('click', () => {
+        disclaimerModal!.style.display = 'none';
+      });
+
+      disclaimerModal?.addEventListener('click', (e) => {
+        if (e.target === disclaimerModal) {
+          disclaimerModal.style.display = 'none';
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && disclaimerModal?.style.display === 'flex') {
+          disclaimerModal.style.display = 'none';
+        }
+      });
     </script>
   </body>
 </html>
