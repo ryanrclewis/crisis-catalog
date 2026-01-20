@@ -186,6 +186,20 @@ header .cross {
   font-weight: 700;
 }
 
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 4px solid #000;
+  background: #fff;
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #000;
+}
+
 /* Buttons */
 button {
   font-family: var(--font-family);

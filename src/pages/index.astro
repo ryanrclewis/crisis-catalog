@@ -30,26 +30,6 @@ const data = {
   </div>
 
   <ChecklistWidget client:load data={data} />
-
-  <div class="footer-section">
-    <h3>About This Tool</h3>
-    <p>
-      <strong>Privacy:</strong> All checklist data and your selections are stored locally on your
-      device. No information is sent to servers.
-    </p>
-    <p>
-      <strong>Customization:</strong> This is a static website. To update items or recommendations,
-      contact the site maintainer for edits to the Markdown source files.
-    </p>
-    <p>
-      <strong>Categories:</strong> Items are organized by Water, Food, Medications, Documents, Tools,
-      and Spiritual Items. Priorities are marked High, Medium, or Low based on criticality.
-    </p>
-    <p>
-      <strong>Spiritual Foundation:</strong> Inspired by St. Michael the Archangel, protector and
-      defender, this guide emphasizes the integration of faith and practical preparedness.
-    </p>
-  </div>
 </Layout>
 
 <style>
@@ -72,32 +52,8 @@ const data = {
     margin: 1rem 0;
   }
 
-  .footer-section {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.98);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .footer-section h3 {
-    color: #1c3a4a;
-    margin-top: 0;
-  }
-
-  .footer-section p {
-    color: #333;
-    line-height: 1.7;
-    margin: 1rem 0;
-  }
-
-  .footer-section strong {
-    color: #1c3a4a;
-  }
-
   @media (max-width: 768px) {
-    .intro-section,
-    .footer-section {
+    .intro-section {
       padding: 1.5rem;
     }
   }
