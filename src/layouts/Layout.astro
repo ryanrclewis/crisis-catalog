@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title = 'Emergency Preparedness' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Catholic family emergency preparedness checklist" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.cdnfonts.com/css/ocr-a-std" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Catholic Crisis Catalog
+      </h1>
+      <p class="subtitle">A Catholic Family's Guide to Crisis Readiness</p>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <script>
+      // Register service worker for offline support
+      if ('serviceWorker' in navigator && import.meta.env.PROD) {
+        navigator.serviceWorker.register('/sw.js').catch(() => {
+          // Service worker registration failed, app still works offline with just localStorage
+        });
+      }
+    </script>
+  </body>
+</html>

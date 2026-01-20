@@ -1,0 +1,671 @@
+/* Checklist Widget Styles */
+
+.checklist-widget {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  border: 4px solid #000;
+  box-shadow: none;
+  font-family: 'OCR A Std', 'Courier New', monospace;
+}
+
+/* Guidance Cards - Clickable Selectors */
+.guidance-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-bottom: 0;
+  border-bottom: 4px solid #000;
+}
+
+.card {
+  padding: 1rem;
+  background: #fff;
+  border: none;
+  border-right: 2px solid #000;
+  border-radius: 0;
+  transition: none;
+  text-align: left;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.card-selector {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: #fff;
+  color: inherit;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 0;
+  border-right: 2px solid #000;
+  transition: all 0.1s ease;
+}
+
+.card-selector:last-child {
+  border-right: none;
+}
+
+.card-selector:hover {
+  box-shadow: none;
+  transform: none;
+  background: #f0f0f0;
+}
+
+.card-selector:focus {
+  outline: 4px solid #000;
+  outline-offset: -4px;
+}
+
+.card-selector.active {
+  background: #000;
+  color: #fff;
+}
+
+.card-selector.active h3,
+.card h3 {
+  margin-top: 0;
+  color: inherit;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.card-selector.active p,
+.card p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.75rem;
+  color: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.card-selector.active p {
+  color: #fff;
+}
+
+.card p {
+  color: #666;
+}
+
+/* Sort Controls */
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 0;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-bottom: 2px solid #000;
+}
+
+.sort-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 1rem;
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+
+.sort-button {
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 2px solid #000;
+  border-right: none;
+  border-radius: 0;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sort-button:last-child {
+  border-right: 2px solid #000;
+}
+
+.sort-button:hover {
+  background: #f0f0f0;
+}
+
+.sort-button:focus {
+  outline: 4px solid #000;
+  outline-offset: -4px;
+  z-index: 1;
+}
+
+.sort-button.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Header */
+.checklist-header {
+  margin-bottom: 0;
+  border-bottom: 2px solid #000;
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+
+.checklist-header h2 {
+  margin: 0;
+  color: #000;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.checklist-header .description {
+  margin: 0.25rem 0 0 0;
+  color: #666;
+  font-size: 0.75rem;
+  text-transform: none;
+}
+
+/* Stats */
+.checklist-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 0;
+  padding: 0;
+  background: #fff;
+  border-bottom: 2px solid #000;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1rem;
+  border-right: 2px solid #000;
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat-label {
+  font-size: 0.625rem;
+  color: #666;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 0.25rem;
+  font-family: 'OCR A Std', 'Courier New', monospace;
+}
+
+/* Items */
+.checklist-items {
+  display: grid;
+  gap: 0;
+  margin-bottom: 0;
+}
+
+.item {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+  transition: none;
+}
+
+.item:hover {
+  border-color: #000;
+  background: #f0f0f0;
+  box-shadow: none;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.item-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.item-checkbox input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #000;
+  border: 2px solid #000;
+}
+
+.item-label {
+  font-size: 0.875rem;
+  color: #000;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.item-checkbox input:checked + .item-label {
+  color: #666;
+  text-decoration: line-through;
+}
+
+.priority {
+  padding: 0.125rem 0.5rem;
+  border: 2px solid #000;
+  border-radius: 0;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-left: 0.5rem;
+  background: #fff;
+  color: #000;
+  letter-spacing: 0.05em;
+}
+
+.priority-high {
+  background: #ff0000;
+  color: #fff;
+  border-color: #ff0000;
+}
+
+.priority-med {
+  background: #ffff00;
+  color: #000;
+  border-color: #ffff00;
+}
+
+.priority-low {
+  background: #0080ff;
+  color: #fff;
+  border-color: #0080ff;
+}
+
+/* Item Details */
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.cost {
+  font-weight: 700;
+  color: #000;
+  font-family: 'OCR A Std', 'Courier New', monospace;
+}
+
+.category {
+  text-transform: uppercase;
+  background: #fff;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.details-btn {
+  background: #000;
+  border: 2px solid #000;
+  font-size: 0.625rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-left: auto;
+}
+
+.details-btn:hover {
+  transform: none;
+  background: #fff;
+  color: #000;
+}
+
+.details-btn:focus {
+  outline: 4px solid #000;
+  outline-offset: -4px;
+}
+
+.item-notes {
+  margin: 0.5rem 0 0 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Actions */
+.checklist-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 1rem;
+  border-top: 4px solid #000;
+}
+
+.reset-btn {
+  padding: 0.75rem 2rem;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reset-btn:hover {
+  background: #000;
+  color: #fff;
+  transform: none;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-dialog {
+  background: white;
+  border: 4px solid #000;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: none;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 2px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 0.875rem;
+  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  padding: 0;
+  line-height: 1;
+  transition: opacity 0.1s ease;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  opacity: 0.7;
+  outline: none;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-section {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-section:last-of-type {
+  border-bottom: none;
+}
+
+.modal-section h4 {
+  margin: 0 0 0.5rem 0;
+  color: #000;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.modal-section p {
+  margin: 0;
+  color: #000;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.modal-section ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.modal-section li {
+  padding: 0.25rem 0;
+  color: #000;
+  font-size: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-section li:last-child {
+  border-bottom: none;
+}
+
+.modal-section li strong {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.purchase-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 0;
+  font-weight: 700;
+  transition: all 0.1s ease;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.purchase-link:hover {
+  background: #fff;
+  color: #000;
+}
+
+.purchase-link:focus {
+  outline: 4px solid #000;
+  outline-offset: -4px;
+}
+
+.modal-footer {
+  padding: 1rem;
+  border-top: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  background: #f0f0f0;
+}
+
+.modal-close-btn {
+  padding: 0.75rem 2rem;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal-close-btn:hover {
+  background: #000;
+  color: #fff;
+  transform: none;
+}
+
+.modal-close-btn:focus {
+  outline: 2px solid #1c3a4a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checklist-widget {
+    padding: 1.5rem;
+  }
+
+  .checklist-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .item-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .priority {
+    align-self: flex-start;
+    margin-left: 0;
+  }
+
+  .item-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .modal-dialog {
+    margin: 0 1rem;
+  }
+}
+
+/* Focus visible states for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #1c3a4a;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .item,
+  .details-btn,
+  .modal-dialog,
+  .selector-btn,
+  .purchase-link,
+  .reset-btn {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .checklist-widget {
+    background: rgba(30, 30, 30, 0.98);
+    color: #e0e0e0;
+  }
+
+  .checklist-header h2,
+  .stat-value {
+    color: #90caf9;
+  }
+
+  .checklist-header {
+    border-bottom-color: #90caf9;
+  }
+
+  .checklist-stats {
+    background: rgba(33, 150, 243, 0.1);
+  }
+
+  .item {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #e0e0e0;
+  }
+
+  .item:hover {
+    border-color: #90caf9;
+    background: #333;
+  }
+
+  .item-label {
+    color: #e0e0e0;
+  }
+
+  .modal-dialog {
+    background: #2a2a2a;
+    color: #e0e0e0;
+  }
+
+  .modal-section p,
+  .modal-section li {
+    color: #e0e0e0;
+  }
+}
