@@ -34,27 +34,42 @@ const data = {
 
 <style>
   .intro-section {
-    margin-bottom: 2rem;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.98);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
   }
 
   .intro-section h2 {
     margin-top: 0;
-    color: #1c3a4a;
+    color: var(--color-primary);
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   .intro-section p {
-    color: #333;
-    line-height: 1.7;
-    margin: 1rem 0;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: var(--spacing-md) 0;
+    font-size: 1.0625rem;
   }
 
   @media (max-width: 768px) {
     .intro-section {
-      padding: 1.5rem;
+      padding: var(--spacing-lg);
+      border-radius: 0;
+    }
+
+    .intro-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .intro-section {
+      background: #1c1c1e;
     }
   }
 </style>
